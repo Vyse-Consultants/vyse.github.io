@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +10,15 @@ body {
   line-height: 1.6;
   background: #f9f9f9;
   color: #333;
+  scroll-behavior: smooth;
 }
 
-/* Container */
 .container {
   width: 90%;
   max-width: 1000px;
   margin: auto;
 }
 
-/* Header */
 header {
   background: #111;
   color: #fff;
@@ -44,21 +43,11 @@ nav a {
   font-weight: 500;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero */
 .hero {
   background: #1e90ff;
   color: #fff;
   text-align: center;
   padding: 80px 20px;
-}
-
-.hero h2 {
-  font-size: 40px;
-  margin-bottom: 15px;
 }
 
 .hero .btn {
@@ -72,30 +61,45 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* Sections */
 section {
   padding: 60px 20px;
   text-align: center;
 }
 
-#services .service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+#services .services-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
   margin-top: 30px;
 }
 
-.service-card {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+.services-menu a {
+  display: inline-block;
+  background: #1e90ff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
-.service-card h3 {
-  font-size: 22px;
+.services-menu a:hover {
+  background: #156fc4;
+}
+
+.service-detail {
+  background: #fff;
+  padding: 40px 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.service-detail h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
   color: #1e90ff;
-  margin-bottom: 10px;
 }
 
 form {
@@ -120,7 +124,6 @@ form button {
   border-radius: 4px;
 }
 
-/* Footer */
 footer {
   background: #222;
   color: #fff;
