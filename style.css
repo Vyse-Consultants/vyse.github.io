@@ -121,12 +121,12 @@ nav a:hover {
   transition: transform 0.3s;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: var(--accent-color);
+.rotated {
+  transform: rotate(180deg);
 }
 
-.dropdown:hover .dropbtn i {
-  transform: rotate(180deg);
+.dropdown:hover .dropbtn {
+  background-color: var(--accent-color);
 }
 
 .dropdown-content {
@@ -159,7 +159,7 @@ nav a:hover {
   background-color: var(--bg-light);
 }
 
-.dropdown:hover .dropdown-content {
+.show {
   display: block;
 }
 
