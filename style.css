@@ -1,4 +1,4 @@
-/* Base styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,128 +6,173 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background: #f9f9f9;
   color: #333;
-  scroll-behavior: smooth;
+  background-color: #f9f9f9;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Container */
 .container {
-  width: 90%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
-header {
-  background: #111;
-  color: #fff;
+/* Header */
+.header {
+  background-color: #1e1e2f;
   padding: 20px 0;
+  color: #fff;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-header .container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.hero {
-  background: #1e90ff;
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.hero .btn {
-  display: inline-block;
-  background: #fff;
-  color: #1e90ff;
-  padding: 10px 20px;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-}
-
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#services .services-menu {
+.logo {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.services-menu a {
-  display: inline-block;
-  background: #1e90ff;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #fff;
-  padding: 10px 15px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s;
 }
 
-.services-menu a:hover {
-  background: #156fc4;
+.logo img {
+  height: 40px;
+  margin-right: 10px;
 }
 
-.service-detail {
-  background: #fff;
-  padding: 40px 20px;
-  margin: 20px 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.service-detail h3 {
-  font-size: 26px;
-  margin-bottom: 15px;
-  color: #1e90ff;
+.nav a, .dropbtn {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  background-color: #fff;
+  color: #000;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 1000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #fff;
+  color: #0077ff;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Sections */
+.services-section,
+.contact-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.services-section h2,
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contact Form */
 form {
   max-width: 500px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 form button {
-  background: #1e90ff;
-  color: #fff;
+  background-color: #0077ff;
+  color: white;
+  padding: 12px;
   border: none;
-  padding: 12px 20px;
-  font-size: 16px;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 4px;
+  font-weight: bold;
 }
 
-footer {
-  background: #222;
+form button:hover {
+  background-color: #005bb5;
+}
+
+/* Footer */
+.footer {
+  background-color: #1e1e2f;
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  margin-top: 40px;
 }
