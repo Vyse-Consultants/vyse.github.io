@@ -5,17 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VYSE - Our Services</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Add this CSS if not in style.css */
+    .logo img {
+      height: 40px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #000;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <div class="container">
-      <h1 class="logo">VYSE</h1>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="VYSE Logo" />
+      </a>
       <nav>
-        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <div class="dropdown">
+          <a href="#services">Our Services</a>
+          <div class="dropdown-content">
+            <a href="https://recruitment.vyse.co.in/">Recruiting Services</a>
+            <a href="https://dev.vyse.co.in/info.txt">Software Services</a>
+            <a href="https://security.vyse.co.in/">VAPT & Bug Bounty</a>
+            <a href="https://dev.vyse.co.in/">Web/App Development</a>
+            <a href="https://marketing.vyse.co.in/">Digital Marketing</a>
+            <a href="https://finance.vyse.co.in/">Payroll & CA Services</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -24,23 +73,16 @@
   <section class="hero">
     <div class="container">
       <h2>Empowering Businesses with Smart Solutions</h2>
-      <p>Your one-stop shop for digital, recruitment, and cybersecurity services.</p>
+      <p>Your one-stop solution for digital, recruitment, and cybersecurity services.</p>
       <a href="#services" class="btn">Explore Services</a>
     </div>
   </section>
 
-  <!-- Services Menu -->
+  <!-- Placeholder for services -->
   <section id="services">
     <div class="container">
       <h2>Our Services</h2>
-      <div class="services-menu">
-        <a href="https://recruitment.vyse.co.in/">Recruiting Services</a>
-        <a href="https://dev.vyse.co.in/info.txt">Software Services</a>
-        <a href="https://security.vyse.co.in/">VAPT & Bug Bounty</a>
-        <a href="https://dev.vyse.co.in/">Web/App Development</a>
-        <a href="https://marketing.vyse.co.in/">Digital Marketing</a>
-        <a href="https://finance.vyse.co.in/">Payroll & CA Services</a>
-      </div>
+      <p>Select a service from the dropdown menu above to learn more.</p>
     </div>
   </section>
 
