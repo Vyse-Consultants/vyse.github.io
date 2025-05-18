@@ -40,8 +40,10 @@
     <div class="container">
       <h2>Our Services</h2>
       <div class="dropdown">
-        <button class="dropbtn">Choose a Service <i class="fas fa-chevron-down"></i></button>
-        <div class="dropdown-content">
+        <button class="dropbtn" onclick="toggleDropdown()">
+          Choose a Service <i class="fas fa-chevron-down" id="dropdown-icon"></i>
+        </button>
+        <div class="dropdown-content" id="dropdown-menu">
           <a href="https://recruitment.vyse.co.in/"><i class="fas fa-user-tie"></i> Recruiting Services</a>
           <a href="https://dev.vyse.co.in/info.txt"><i class="fas fa-code"></i> Software Services</a>
           <a href="https://security.vyse.co.in/"><i class="fas fa-shield-alt"></i> VAPT & Bug Bounty</a>
@@ -72,5 +74,24 @@
     </div>
   </footer>
 
+  <!-- Dropdown toggle script -->
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown-menu");
+      const icon = document.getElementById("dropdown-icon");
+      dropdown.classList.toggle("show");
+      icon.classList.toggle("rotated");
+    }
+
+    // Close dropdown if clicked outside
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn') && !e.target.closest('.dropbtn')) {
+        const dropdown = document.getElementById("dropdown-menu");
+        const icon = document.getElementById("dropdown-icon");
+        dropdown.classList.remove("show");
+        icon.classList.remove("rotated");
+      }
+    }
+  </script>
 </body>
 </html>
