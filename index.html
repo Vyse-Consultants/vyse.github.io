@@ -5,54 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VYSE - Our Services</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="index.html" class="logo">
-        <img src="logo.png" alt="VYSE Logo">
-        <span>VYSE</span>
+  <header>
+    <div class="container header">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="VYSE Logo" class="logo-img">
+        <span class="logo-text">VYSE</span>
       </a>
-      <nav class="nav">
+      <nav>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <div class="dropdown">
-          <button class="dropbtn">Our Services</button>
-          <div class="dropdown-content">
-            <a href="https://recruitment.vyse.co.in/">Recruiting Services</a>
-            <a href="https://dev.vyse.co.in/info.txt">Software Services</a>
-            <a href="https://security.vyse.co.in/">VAPT & Bug Bounty</a>
-            <a href="https://dev.vyse.co.in/">Web/App Development</a>
-            <a href="https://marketing.vyse.co.in/">Digital Marketing</a>
-            <a href="https://finance.vyse.co.in/">Payroll & CA Services</a>
-          </div>
-        </div>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container hero-content">
+    <div class="container">
       <h2>Empowering Businesses with Smart Solutions</h2>
       <p>Your one-stop solution for digital, recruitment, and cybersecurity services.</p>
       <a href="#services" class="btn">Explore Services</a>
     </div>
   </section>
 
-  <!-- Placeholder for services -->
-  <section id="services" class="services-section">
+  <!-- Services Menu -->
+  <section id="services">
     <div class="container">
       <h2>Our Services</h2>
-      <p>Select a service from the dropdown menu above to learn more.</p>
+      <div class="dropdown">
+        <button class="dropbtn">Choose a Service <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <a href="https://recruitment.vyse.co.in/"><i class="fas fa-user-tie"></i> Recruiting Services</a>
+          <a href="https://dev.vyse.co.in/info.txt"><i class="fas fa-code"></i> Software Services</a>
+          <a href="https://security.vyse.co.in/"><i class="fas fa-shield-alt"></i> VAPT & Bug Bounty</a>
+          <a href="https://dev.vyse.co.in/"><i class="fas fa-laptop-code"></i> Web/App Development</a>
+          <a href="https://marketing.vyse.co.in/"><i class="fas fa-bullhorn"></i> Digital Marketing</a>
+          <a href="https://finance.vyse.co.in/"><i class="fas fa-file-invoice-dollar"></i> Payroll & CA Services</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact-section">
+  <section id="contact">
     <div class="container">
       <h2>Contact Us</h2>
       <form>
@@ -64,10 +66,9 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <footer>
     <div class="container">
-      <p>&copy; 2025 VYSE All rights reserved.</p>
+      <p>&copy; 2025 VYSE. All rights reserved.</p>
     </div>
   </footer>
 
